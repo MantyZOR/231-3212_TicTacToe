@@ -1,6 +1,6 @@
 # 231-3212_TicTacToe
 
-Более подробная информация написана в ### [Wiki](https://github.com/MantyZOR/231-3212_TicTacToe/wiki)
+Более подробная информация написана в [Wiki](https://github.com/MantyZOR/231-3212_TicTacToe/wiki)
 
 Данный проект разрабатывается тремя участниками:
 
