@@ -10,7 +10,13 @@ set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 COMPONENTS Widgets Network REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp
+        src/ui/renderer.cpp
+        src/ui/renderer.h
+        src/network/client.cpp
+        src/network/client.h
+        src/manager/application.cpp
+        src/manager/application.h)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 target_link_libraries(${PROJECT_NAME} Qt6::Widgets Qt6::Network)
