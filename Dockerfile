@@ -25,7 +25,7 @@ RUN mv tictactoe_server /app/tictactoe_server && \
 
 # Set the working directory to /app, where the application binary is located
 WORKDIR /app
-EXPOSE 8082
+EXPOSE 8083
 
 # Command to run the application
 CMD ["./tictactoe_server"]
