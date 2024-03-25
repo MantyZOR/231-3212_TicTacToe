@@ -9,11 +9,15 @@ Renderer& Renderer::getInstance()
 Renderer::Renderer() : layout(&window)
 {
     window.setWindowTitle("Tic Tac Toe");
-    input.setToolTip("Enter message here...");
-    layout.addWidget(&label);
-    layout.addWidget(&input);
-    layout.addWidget(&button);
+
+    layout.addWidget(&stackedWidget);
     window.setLayout(&layout);
+
+    stackedWidget.addWidget(&authWindow);
+    stackedWidget.addWidget(&gameListWindow);
+    stackedWidget.addWidget(&ticTacToeWindow);
+
+    changeWindow(getAuthWindow());
 }
 
 void Renderer::render()
@@ -21,17 +25,22 @@ void Renderer::render()
     window.show();
 }
 
-QLabel* Renderer::getLabel()
+AuthWindow* Renderer::getAuthWindow()
 {
-    return &label;
+    return &authWindow;
 }
 
-QPushButton* Renderer::getButton()
+GameListWindow* Renderer::getGameListWindow()
 {
-    return &button;
+    return &gameListWindow;
 }
 
-QLineEdit* Renderer::getInput()
+TicTacToeWindow* Renderer::getTicTacToeWindow()
 {
-    return &input;
+    return &ticTacToeWindow;
+}
+
+void Renderer::changeWindow(QWidget* window)
+{
+    stackedWidget.setCurrentWidget(window);
 }

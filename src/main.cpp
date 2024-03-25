@@ -12,8 +12,9 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
-    Application manager;
-    manager.setupConnections();
+    Application::getInstance().setupConnections();
+
+    QObject::connect(&app, &QApplication::aboutToQuit, &Application::getInstance(), &Application::onAboutToQuit);
 
     Renderer::getInstance().render();
 

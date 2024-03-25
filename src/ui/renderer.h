@@ -3,9 +3,10 @@
 
 #include <QWidget>
 #include <QVBoxLayout>
-#include <QLabel>
-#include <QPushButton>
-#include <QLineEdit>
+#include <QStackedWidget>
+#include "components/auth_window.h"
+#include "components/game_list_window.h"
+#include "components/game_window.h"
 
 class Renderer
 {
@@ -13,17 +14,20 @@ public:
     static Renderer& getInstance();
     void             render();
 
-    QLabel*      getLabel();
-    QPushButton* getButton();
-    QLineEdit*   getInput();
+    AuthWindow* getAuthWindow();
+    GameListWindow* getGameListWindow();
+    TicTacToeWindow* getTicTacToeWindow();
+    void changeWindow(QWidget* window);
 
 private:
     Renderer();
-    QWidget     window;
+    QWidget window;
     QVBoxLayout layout;
-    QLabel      label {"Welcome to Tic Tac Toe!"};
-    QPushButton button {"Send Message"};
-    QLineEdit   input;
+    QStackedWidget stackedWidget;
+
+    AuthWindow authWindow;
+    GameListWindow gameListWindow;
+    TicTacToeWindow ticTacToeWindow;
 };
 
 #endif //RENDERER_H

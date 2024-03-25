@@ -3,13 +3,20 @@
 #include "src/network/client.h"
 #include "src/ui/renderer.h"
 
-class Application
+class Application : public QObject
 {
+    Q_OBJECT
 public:
-    Application();
+    static Application& getInstance();
     void setupConnections();
 
+    void onAboutToQuit();
+
+    void sendAction(const int cell);
 private:
+    Application();
+    Application(const Application&) = delete;
+    Application& operator=(const Application&) = delete;
     Client&   client;
     Renderer& renderer;
 };
