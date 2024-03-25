@@ -14,7 +14,7 @@ public:
     void joinRoom(const std::string& roomName);
     void leaveGame();
 
-private:
+  private:
     GameServer();
     GameServer(const GameServer&)            = delete;
     GameServer& operator=(const GameServer&) = delete;
