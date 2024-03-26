@@ -14,7 +14,7 @@ DatabaseRepository& DatabaseRepository::getInstance()
 DatabaseRepository::DatabaseRepository()
 {
 }
-
+#include <QFile>
 void DatabaseRepository::connectToDatabase()
 {
     if (!QSqlDatabase::isDriverAvailable("QSQLITE"))
@@ -23,15 +23,25 @@ void DatabaseRepository::connectToDatabase()
         return;
     }
 
+    QString dbPath = QCoreApplication::applicationDirPath() + "/test.db";
+    QFile dbFile(dbPath);
+
+    if (!dbFile.exists()) {
+        if (!dbFile.open(QIODevice::ReadWrite)) {
+            std::cout << "Error: Unable to create database file" << std::endl;
+            return;
+        }
+        dbFile.close();
+    }
+
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/Users/easton/Documents/tictactoe_server/test.db");
+    db.setDatabaseName(dbPath);
 
     if (!db.open())
     {
         std::cout << "Error: connection with database failed" << std::endl;
     }
 }
-
 void DatabaseRepository::createTables()
 {
     QSqlQuery query(db);
