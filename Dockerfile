@@ -3,7 +3,7 @@ FROM gcc:latest
 
 # Install CMake and other necessary build tools
 RUN apt-get update && \
-    apt-get install -y cmake && \
+    apt-get install -y cmake qt6-base-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
