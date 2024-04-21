@@ -31,6 +31,84 @@ Application& Application::getInstance()
     return instance;
 }
 
+void Application::handleAuthenticate(nlohmann::json& message) {
+  auto result = message["result"].get<int>();
+  if (result != -1)
+  {
+	GameCoordinator::getInstance().setAuthorizeID(result);
+	renderer.changeWindow(renderer.getGameListWindow());
+  }
+  else
+  {
+	QMessageBox::warning(nullptr, "Error", "Invalid username or password");
+  }
+}
+
+void Application::handleRegister(nlohmann::json& message) {
+  auto result = message["result"].get<int>();
+  if (result != -1)
+  {
+	GameCoordinator::getInstance().setAuthorizeID(result);
+	renderer.changeWindow(renderer.getGameListWindow());
+  }
+  else
+  {
+	QMessageBox::warning(nullptr, "Error", "Cant register user");
+  }
+}
+
+void Application::handleGetRooms(nlohmann::json& message) {
+  auto result = message["result"];
+
+  std::vector<GameUI> rooms;
+  for (const auto& room : result)
+  {
+	Game game = room.get<Game>();
+
+	GameUI gameUI;
+	gameUI.id   = game.id;
+	gameUI.name = game.roomName;
+	rooms.emplace_back(gameUI);
+  }
+
+  renderer.getGameListWindow()->FillGames(rooms);
+}
+
+void Application::handleCreateRoom(nlohmann::json& message) {
+  auto game = message["result"].get<Game>();
+  GameCoordinator::getInstance().setGame(game);
+  renderer.changeWindow(renderer.getTicTacToeWindow());
+}
+
+void Application::handleJoinRoom(nlohmann::json& message) {
+  auto game = message["result"].get<Game>();
+  GameCoordinator::getInstance().setGame(game);
+  renderer.changeWindow(renderer.getTicTacToeWindow());
+}
+
+void Application::handleGetGame(nlohmann::json& message) {
+  auto game = message["result"].get<Game>();
+  GameCoordinator::getInstance().setGame(game);
+
+  renderer.getTicTacToeWindow()->enableButtons();
+
+  auto state = GameCoordinator::getInstance().stringToState(game.state);
+  renderer.getTicTacToeWindow()->fill_buttons(state);
+}
+
+void Application::handleAction(nlohmann::json& message) {
+  auto game = message["result"].get<Game>();
+  GameCoordinator::getInstance().setGame(game);
+  renderer.getTicTacToeWindow()->enableButtons();
+
+  auto state = GameCoordinator::getInstance().stringToState(game.state);
+  renderer.getTicTacToeWindow()->fill_buttons(state);
+}
+
+void Application::handleLeaveRoom(nlohmann::json& message) {
+  renderer.changeWindow(renderer.getGameListWindow());
+}
+
 void Application::setupConnections()
 {
     static bool in_box = false;
@@ -200,142 +278,50 @@ void Application::setupConnections()
                      });
 
 
-    QObject::connect(client.getSocket(),
-                     &QTcpSocket::readyRead,
-                     [&]()
-                     {
-                         QByteArray data        = client.readData();
-                         QString    currentTime = QDateTime::currentDateTime().toString();
-                         std::cout << ("Server says: " + QString(data) + " at " + currentTime).toStdString() <<
-                                 std::endl;
+  QObject::connect(client.getSocket(),
+				   &QTcpSocket::readyRead,
+				   [&]()
+				   {
+					 QByteArray data        = client.readData();
+					 QString    currentTime = QDateTime::currentDateTime().toString();
+					 std::cout << ("Server says: " + QString(data) + " at " + currentTime).toStdString() <<
+							   std::endl;
 
-                         nlohmann::json message = nlohmann::json::parse(data.toStdString());
+					 nlohmann::json message = nlohmann::json::parse(data.toStdString());
 
-                         auto type = static_cast<STATUS_CODES>(message["type"].get<int>());
+					 auto type = static_cast<STATUS_CODES>(message["type"].get<int>());
 
-                         switch (type)
-                         {
-                             case STATUS_CODES::AUTHENTICATE:
-                                 {
-                                     auto result = message["result"].get<int>();
-                                     if (result != -1)
-                                     {
-                                         GameCoordinator::getInstance().setAuthorizeID(result);
-                                         renderer.changeWindow(renderer.getGameListWindow());
-                                     }
-                                     else
-                                     {
-                                         QMessageBox::warning(nullptr, "Error", "Invalid username or password");
-                                     }
-                                     break;
-                                 }
-                             case STATUS_CODES::REGISTER:
-                                 {
-                                     auto result = message["result"].get<int>();
-                                     if (result != -1)
-                                     {
-                                         GameCoordinator::getInstance().setAuthorizeID(result);
-                                         renderer.changeWindow(renderer.getGameListWindow());
-                                     }
-                                     else
-                                     {
-                                         QMessageBox::warning(nullptr, "Error", "Cant register user");
-                                     }
-
-                                     break;
-                                 }
-                             case STATUS_CODES::GET_ROOMS:
-                                 {
-                                     auto result = message["result"];
-
-                                     std::vector<GameUI> rooms;
-                                     for (const auto& room : result)
-                                     {
-                                         Game game = room.get<Game>();
-
-                                         GameUI gameUI;
-                                         gameUI.id   = game.id;
-                                         gameUI.name = game.roomName;
-                                         rooms.emplace_back(gameUI);
-                                     }
-
-                                     renderer.getGameListWindow()->FillGames(rooms);
-                                     break;
-                                 }
-                             case STATUS_CODES::CREATE_ROOM:
-                                 {
-                                     auto game = message["result"].get<Game>();
-                                     GameCoordinator::getInstance().setGame(game);
-                                     renderer.changeWindow(renderer.getTicTacToeWindow());
-                                     break;
-                                 }
-                             case STATUS_CODES::JOIN_ROOM:
-                                 {
-                                     auto game = message["result"].get<Game>();
-                                     GameCoordinator::getInstance().setGame(game);
-                                     renderer.changeWindow(renderer.getTicTacToeWindow());
-                                     break;
-                                 }
-                             case STATUS_CODES::GET_GAME:
-                                 {
-                                     auto game = message["result"].get<Game>();
-                                     GameCoordinator::getInstance().setGame(game);
-
-                                     renderer.getTicTacToeWindow()->enableButtons();
-
-                                     auto stringToState = [&](
-                                         const std::string& stateStr) -> std::vector<std::vector<int>>
-                                     {
-                                         std::vector state(3, std::vector(3, 0));
-                                         for (int i = 0; i < 3; ++i)
-                                         {
-                                             for (int j = 0; j < 3; ++j)
-                                             {
-                                                 state[i][j] = stateStr[i * 3 + j] - '0';
-                                             }
-                                         }
-                                         return state;
-                                     };
-
-                                     renderer.getTicTacToeWindow()->
-                                              fill_buttons(stringToState(GameCoordinator::getInstance().getState()));
-                                     // todo: renderer.getTicTacToeWindow()->updateGame();
-                                     break;
-                                 }
-                             case STATUS_CODES::ACTION:
-                                 {
-                                     auto game = message["result"].get<Game>();
-                                     GameCoordinator::getInstance().setGame(game);
-                                     renderer.getTicTacToeWindow()->enableButtons();
-
-                                     auto stringToState = [&](
-                                         const std::string& stateStr) -> std::vector<std::vector<int>>
-                                     {
-                                         std::vector state(3, std::vector(3, 0));
-                                         for (int i = 0; i < 3; ++i)
-                                         {
-                                             for (int j = 0; j < 3; ++j)
-                                             {
-                                                 state[i][j] = stateStr[i * 3 + j] - '0';
-                                             }
-                                         }
-                                         return state;
-                                     };
-
-                                     renderer.getTicTacToeWindow()->
-                                              fill_buttons(stringToState(GameCoordinator::getInstance().getState()));
-                                     break;
-                                 }
-                             case STATUS_CODES::LEAVE_ROOM:
-                                 {
-                                     renderer.changeWindow(renderer.getGameListWindow());
-                                     break;
-                                 }
-                             default:
-                                 std::cout << "Unknown message type" << std::endl;
-                                 break;
-                         }
-                     });
+					 switch (type)
+					 {
+					   case STATUS_CODES::AUTHENTICATE:
+						 handleAuthenticate(message);
+						 break;
+					   case STATUS_CODES::REGISTER:
+						 handleRegister(message);
+						 break;
+					   case STATUS_CODES::GET_ROOMS:
+						 handleGetRooms(message);
+						 break;
+					   case STATUS_CODES::CREATE_ROOM:
+						 handleCreateRoom(message);
+						 break;
+					   case STATUS_CODES::JOIN_ROOM:
+						 handleJoinRoom(message);
+						 break;
+					   case STATUS_CODES::GET_GAME:
+						 handleGetGame(message);
+						 break;
+					   case STATUS_CODES::ACTION:
+						 handleAction(message);
+						 break;
+					   case STATUS_CODES::LEAVE_ROOM:
+						 handleLeaveRoom(message);
+						 break;
+					   default:
+						 std::cout << "Unknown message type" << std::endl;
+						 break;
+					 }
+				   });
 }
 
 void Application::onAboutToQuit()
