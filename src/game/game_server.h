@@ -3,26 +3,31 @@
 
 #include "../network/network.h"
 
-class GameServer
-{
-public:
-    static GameServer& getInstance();
-    void               start() const;
+class GameServer {
+ public:
+  static GameServer &getInstance();
 
-    void startGame();
-    void createRoom(const std::string& roomName);
-    void joinRoom(const std::string& roomName);
-    void leaveGame();
+  void start() const;
 
-  private:
-    GameServer();
-    GameServer(const GameServer&)            = delete;
-    GameServer& operator=(const GameServer&) = delete;
+  void startGame();
 
-    static void handleConnection(Socket& client_socket);
+  void createRoom(const std::string &roomName);
 
-    Network::Callback connectionHandler;
-    static GameServer instance;
+  void joinRoom(const std::string &roomName);
+
+  void leaveGame();
+
+ private:
+  GameServer();
+
+  GameServer(const GameServer &) = delete;
+
+  GameServer &operator=(const GameServer &) = delete;
+
+  static void handleConnection(Socket &client_socket);
+
+  Network::Callback connectionHandler;
+  static GameServer instance;
 };
 
 

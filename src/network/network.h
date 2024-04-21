@@ -1,28 +1,30 @@
 #ifndef NETWORK_H
 #define NETWORK_H
+
 #include "socket.h"
 #include "functional"
 
-class Network
-{
-public:
-    static Network& getInstance()
-    {
-        static Network instance;
-        return instance;
-    }
+class Network {
+ public:
+  static Network &getInstance() {
+	static Network instance;
+	return instance;
+  }
 
-    Network(Network const&)        = delete;
-    void operator=(Network const&) = delete;
+  Network(Network const &) = delete;
 
-    void startListening();
+  void operator=(Network const &) = delete;
 
-    using Callback = std::function<void(Socket&)>;
-    void handleConnection(const Callback& callback) const;
+  void startListening();
 
-private:
-    Network() = default;
-    Socket server_fd;
+  using Callback = std::function<void(Socket &)>;
+
+  void handleConnection(const Callback &callback) const;
+
+ private:
+  Network() = default;
+
+  Socket server_fd;
 };
 
 

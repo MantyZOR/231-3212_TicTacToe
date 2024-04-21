@@ -1,31 +1,38 @@
 #ifndef SOCKET_H
 #define SOCKET_H
+
 #include <string>
 #include <netinet/in.h>
 
-class Socket
-{
-public:
-    Socket();
-    Socket(int fd);
-    ~Socket();
+class Socket {
+ public:
+  Socket();
 
-    Socket(const Socket&)            = delete;
-    Socket& operator=(const Socket&) = delete;
-    Socket(Socket&& other) noexcept;
-    Socket& operator=(Socket&& other) noexcept;
+  Socket(int fd);
 
-    void bindSocket();
-    void startListening() const;
+  ~Socket();
 
-    std::string readFromSocket() const;
-    void        writeToSocket(const std::string& message) const;
+  Socket(const Socket &) = delete;
 
-    [[nodiscard]] int getFd() const;
+  Socket &operator=(const Socket &) = delete;
 
-private:
-    int         server_fd = -1;
-    sockaddr_in address{};
+  Socket(Socket &&other) noexcept;
+
+  Socket &operator=(Socket &&other) noexcept;
+
+  void bindSocket();
+
+  void startListening() const;
+
+  std::string readFromSocket() const;
+
+  void writeToSocket(const std::string &message) const;
+
+  [[nodiscard]] int getFd() const;
+
+ private:
+  int server_fd = -1;
+  sockaddr_in address{};
 };
 
 #endif //SOCKET_H
