@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Структура Game</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="struct_game-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура Game</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура, представляющая данные об игре.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="database__repository_8h_source.html">database_repository.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aa7f404e948d52c004f01d940a5fa8556" id="r_aa7f404e948d52c004f01d940a5fa8556"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7f404e948d52c004f01d940a5fa8556">id</a> = -1</td></tr>
+<tr class="memdesc:aa7f404e948d52c004f01d940a5fa8556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уникальный идентификатор игры.  <br /></td></tr>
+<tr class="separator:aa7f404e948d52c004f01d940a5fa8556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b8fb597c7c078130e231dd8590e3d6" id="r_ab0b8fb597c7c078130e231dd8590e3d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0b8fb597c7c078130e231dd8590e3d6">playerX</a> = -1</td></tr>
+<tr class="memdesc:ab0b8fb597c7c078130e231dd8590e3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Идентификатор игрока, играющего за "X".  <br /></td></tr>
+<tr class="separator:ab0b8fb597c7c078130e231dd8590e3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df89143a75ece25f7631a9cb594a904" id="r_a1df89143a75ece25f7631a9cb594a904"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1df89143a75ece25f7631a9cb594a904">playerO</a> = -1</td></tr>
+<tr class="memdesc:a1df89143a75ece25f7631a9cb594a904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Идентификатор игрока, играющего за "O".  <br /></td></tr>
+<tr class="separator:a1df89143a75ece25f7631a9cb594a904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57daa2f1aef9f264c18b462f8294e52" id="r_af57daa2f1aef9f264c18b462f8294e52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af57daa2f1aef9f264c18b462f8294e52">currentPlayer</a> = -1</td></tr>
+<tr class="memdesc:af57daa2f1aef9f264c18b462f8294e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Идентификатор игрока, чей ход следующий.  <br /></td></tr>
+<tr class="separator:af57daa2f1aef9f264c18b462f8294e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb83e4e3df0456b59e1ec3d3f2e8cc0" id="r_adbb83e4e3df0456b59e1ec3d3f2e8cc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbb83e4e3df0456b59e1ec3d3f2e8cc0">winner</a> = -1</td></tr>
+<tr class="memdesc:adbb83e4e3df0456b59e1ec3d3f2e8cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Идентификатор победителя игры (-1, если игра не закончена).  <br /></td></tr>
+<tr class="separator:adbb83e4e3df0456b59e1ec3d3f2e8cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f26fe8a9813267b1e724df8d0ee9118" id="r_a3f26fe8a9813267b1e724df8d0ee9118"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f26fe8a9813267b1e724df8d0ee9118">state</a> = &quot;000000000&quot;</td></tr>
+<tr class="memdesc:a3f26fe8a9813267b1e724df8d0ee9118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Строковое представление состояния игрового поля.  <br /></td></tr>
+<tr class="separator:a3f26fe8a9813267b1e724df8d0ee9118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbea41e75a439e0b57f5e37f2b98933" id="r_a5fbea41e75a439e0b57f5e37f2b98933"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fbea41e75a439e0b57f5e37f2b98933">roomName</a></td></tr>
+<tr class="memdesc:a5fbea41e75a439e0b57f5e37f2b98933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Название комнаты, в которой проходит игра.  <br /></td></tr>
+<tr class="separator:a5fbea41e75a439e0b57f5e37f2b98933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Структура, представляющая данные об игре. </p>
+<p>Структура, представляющая игру. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00013">13</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="af57daa2f1aef9f264c18b462f8294e52" name="af57daa2f1aef9f264c18b462f8294e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57daa2f1aef9f264c18b462f8294e52">&#9670;&#160;</a></span>currentPlayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Game::currentPlayer = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Идентификатор игрока, чей ход следующий. </p>
+<p>Идентификатор текущего игрока. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="aa7f404e948d52c004f01d940a5fa8556" name="aa7f404e948d52c004f01d940a5fa8556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f404e948d52c004f01d940a5fa8556">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Game::id = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уникальный идентификатор игры. </p>
+<p>Идентификатор игры. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a id="a1df89143a75ece25f7631a9cb594a904" name="a1df89143a75ece25f7631a9cb594a904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df89143a75ece25f7631a9cb594a904">&#9670;&#160;</a></span>playerO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Game::playerO = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Идентификатор игрока, играющего за "O". </p>
+<p>Идентификатор игрока "O". </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<a id="ab0b8fb597c7c078130e231dd8590e3d6" name="ab0b8fb597c7c078130e231dd8590e3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b8fb597c7c078130e231dd8590e3d6">&#9670;&#160;</a></span>playerX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Game::playerX = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Идентификатор игрока, играющего за "X". </p>
+<p>Идентификатор игрока "X". </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00015">15</a></p>
+
+</div>
+</div>
+<a id="a5fbea41e75a439e0b57f5e37f2b98933" name="a5fbea41e75a439e0b57f5e37f2b98933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fbea41e75a439e0b57f5e37f2b98933">&#9670;&#160;</a></span>roomName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Game::roomName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Название комнаты, в которой проходит игра. </p>
+<p>Название комнаты. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<a id="a3f26fe8a9813267b1e724df8d0ee9118" name="a3f26fe8a9813267b1e724df8d0ee9118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f26fe8a9813267b1e724df8d0ee9118">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Game::state = &quot;000000000&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Строковое представление состояния игрового поля. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="adbb83e4e3df0456b59e1ec3d3f2e8cc0" name="adbb83e4e3df0456b59e1ec3d3f2e8cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb83e4e3df0456b59e1ec3d3f2e8cc0">&#9670;&#160;</a></span>winner</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Game::winner = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Идентификатор победителя игры (-1, если игра не закончена). </p>
+<p>Идентификатор победителя (-1, если игра не закончена). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="database__repository_8h_source.html">database_repository.h</a> строка <a class="el" href="database__repository_8h_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>231-3212_TicTacToe-backend/231-3212_TicTacToe-backend/src/repository/<a class="el" href="database__repository_8h_source.html">database_repository.h</a></li>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/manager/<a class="el" href="game__coordinator_8h_source.html">game_coordinator.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

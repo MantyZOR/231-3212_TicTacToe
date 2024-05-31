@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Класс Socket</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_socket-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Socket</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, инкапсулирующий работу с сокетами.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="socket_8h_source.html">socket.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7c3256c4fc6e2c603df73201049fae5a" id="r_a7c3256c4fc6e2c603df73201049fae5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c3256c4fc6e2c603df73201049fae5a">Socket</a> ()</td></tr>
+<tr class="memdesc:a7c3256c4fc6e2c603df73201049fae5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса <a class="el" href="class_socket.html" title="Класс, инкапсулирующий работу с сокетами.">Socket</a>.  <br /></td></tr>
+<tr class="separator:a7c3256c4fc6e2c603df73201049fae5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5390f8264f7872c9a8e695e01184e929" id="r_a5390f8264f7872c9a8e695e01184e929"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5390f8264f7872c9a8e695e01184e929">Socket</a> (int fd)</td></tr>
+<tr class="memdesc:a5390f8264f7872c9a8e695e01184e929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса <a class="el" href="class_socket.html" title="Класс, инкапсулирующий работу с сокетами.">Socket</a>, принимающий существующий файловый дескриптор сокета.  <br /></td></tr>
+<tr class="separator:a5390f8264f7872c9a8e695e01184e929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac4eb6379a543d38ed88977d3b6630a" id="r_aeac4eb6379a543d38ed88977d3b6630a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a> ()</td></tr>
+<tr class="memdesc:aeac4eb6379a543d38ed88977d3b6630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класса <a class="el" href="class_socket.html" title="Класс, инкапсулирующий работу с сокетами.">Socket</a>.  <br /></td></tr>
+<tr class="separator:aeac4eb6379a543d38ed88977d3b6630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3119ed70182909caf1c666b831269a" id="r_a5f3119ed70182909caf1c666b831269a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f3119ed70182909caf1c666b831269a">bindSocket</a> ()</td></tr>
+<tr class="memdesc:a5f3119ed70182909caf1c666b831269a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Связывает сокет с адресом и портом.  <br /></td></tr>
+<tr class="separator:a5f3119ed70182909caf1c666b831269a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469a60c1a98aeca6e1bee951f8409721" id="r_a469a60c1a98aeca6e1bee951f8409721"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a469a60c1a98aeca6e1bee951f8409721">startListening</a> () const</td></tr>
+<tr class="memdesc:a469a60c1a98aeca6e1bee951f8409721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переводит сокет в режим прослушивания входящих соединений.  <br /></td></tr>
+<tr class="separator:a469a60c1a98aeca6e1bee951f8409721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc45a0b8292eed75ee944a046716e036" id="r_abc45a0b8292eed75ee944a046716e036"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc45a0b8292eed75ee944a046716e036">readFromSocket</a> () const</td></tr>
+<tr class="memdesc:abc45a0b8292eed75ee944a046716e036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Читает данные из сокета.  <br /></td></tr>
+<tr class="separator:abc45a0b8292eed75ee944a046716e036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75de1c71e015f91e1a8b524c8f008793" id="r_a75de1c71e015f91e1a8b524c8f008793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75de1c71e015f91e1a8b524c8f008793">writeToSocket</a> (const std::string &amp;message) const</td></tr>
+<tr class="memdesc:a75de1c71e015f91e1a8b524c8f008793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает данные в сокет.  <br /></td></tr>
+<tr class="separator:a75de1c71e015f91e1a8b524c8f008793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bd3f2524a429026584c6fb51b9742e" id="r_a14bd3f2524a429026584c6fb51b9742e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14bd3f2524a429026584c6fb51b9742e">getFd</a> () const</td></tr>
+<tr class="memdesc:a14bd3f2524a429026584c6fb51b9742e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает файловый дескриптор сокета.  <br /></td></tr>
+<tr class="separator:a14bd3f2524a429026584c6fb51b9742e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, инкапсулирующий работу с сокетами. </p>
+<p>Предоставляет методы для создания, настройки, чтения и записи данных. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8h_source.html">socket.h</a> строка <a class="el" href="socket_8h_source.html#l00012">12</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7c3256c4fc6e2c603df73201049fae5a" name="a7c3256c4fc6e2c603df73201049fae5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3256c4fc6e2c603df73201049fae5a">&#9670;&#160;</a></span>Socket() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Socket::Socket </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор класса <a class="el" href="class_socket.html" title="Класс, инкапсулирующий работу с сокетами.">Socket</a>. </p>
+<p>Создает сокет с использованием протокола IPv4, типа SOCK_STREAM (TCP) и устанавливает адрес и порт для прослушивания входящих соединений.</p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при создании сокета.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Создает сокет с использованием протокола IPv4 (AF_INET), типа SOCK_STREAM (TCP) и устанавливает адрес и порт для прослушивания входящих соединений (по умолчанию - порт 8083).</p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при создании сокета. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="a5390f8264f7872c9a8e695e01184e929" name="a5390f8264f7872c9a8e695e01184e929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5390f8264f7872c9a8e695e01184e929">&#9670;&#160;</a></span>Socket() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Socket::Socket </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор класса <a class="el" href="class_socket.html" title="Класс, инкапсулирующий работу с сокетами.">Socket</a>, принимающий существующий файловый дескриптор сокета. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>Файловый дескриптор сокета.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае, если передан неверный файловый дескриптор сокета. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<a id="aeac4eb6379a543d38ed88977d3b6630a" name="aeac4eb6379a543d38ed88977d3b6630a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac4eb6379a543d38ed88977d3b6630a">&#9670;&#160;</a></span>~Socket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Socket::~Socket </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деструктор класса <a class="el" href="class_socket.html" title="Класс, инкапсулирующий работу с сокетами.">Socket</a>. </p>
+<p>Закрывает сокет, если он открыт. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00052">52</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a5f3119ed70182909caf1c666b831269a" name="a5f3119ed70182909caf1c666b831269a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3119ed70182909caf1c666b831269a">&#9670;&#160;</a></span>bindSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Socket::bindSocket </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Связывает сокет с адресом и портом. </p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при связывании. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00075">75</a></p>
+
+</div>
+</div>
+<a id="a14bd3f2524a429026584c6fb51b9742e" name="a14bd3f2524a429026584c6fb51b9742e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14bd3f2524a429026584c6fb51b9742e">&#9670;&#160;</a></span>getFd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Socket::getFd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает файловый дескриптор сокета. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Файловый дескриптор сокета. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00066">66</a></p>
+
+</div>
+</div>
+<a id="abc45a0b8292eed75ee944a046716e036" name="abc45a0b8292eed75ee944a046716e036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc45a0b8292eed75ee944a046716e036">&#9670;&#160;</a></span>readFromSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Socket::readFromSocket </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Читает данные из сокета. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка, содержащая прочитанные данные.</dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при чтении. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00100">100</a></p>
+
+</div>
+</div>
+<a id="a469a60c1a98aeca6e1bee951f8409721" name="a469a60c1a98aeca6e1bee951f8409721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469a60c1a98aeca6e1bee951f8409721">&#9670;&#160;</a></span>startListening()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Socket::startListening </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Переводит сокет в режим прослушивания входящих соединений. </p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при переводе в режим прослушивания. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00087">87</a></p>
+
+</div>
+</div>
+<a id="a75de1c71e015f91e1a8b524c8f008793" name="a75de1c71e015f91e1a8b524c8f008793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75de1c71e015f91e1a8b524c8f008793">&#9670;&#160;</a></span>writeToSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Socket::writeToSocket </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Записывает данные в сокет. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Строка, содержащая данные для записи.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при записи. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="socket_8cpp_source.html">socket.cpp</a> строка <a class="el" href="socket_8cpp_source.html#l00120">120</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>231-3212_TicTacToe-backend/231-3212_TicTacToe-backend/src/network/<a class="el" href="socket_8h_source.html">socket.h</a></li>
+<li>231-3212_TicTacToe-backend/231-3212_TicTacToe-backend/src/network/<a class="el" href="socket_8cpp_source.html">socket.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

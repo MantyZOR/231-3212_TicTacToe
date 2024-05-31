@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['game_0',['Game',['../struct_game.html',1,'']]],
+  ['game_5fcoordinator_2ecpp_1',['game_coordinator.cpp',['../game__coordinator_8cpp.html',1,'']]],
+  ['game_5fcoordinator_2eh_2',['game_coordinator.h',['../game__coordinator_8h.html',1,'']]],
+  ['game_5flist_5fwindow_2ecpp_3',['game_list_window.cpp',['../game__list__window_8cpp.html',1,'']]],
+  ['game_5flist_5fwindow_2eh_4',['game_list_window.h',['../game__list__window_8h.html',1,'']]],
+  ['game_5fserver_2ecpp_5',['game_server.cpp',['../game__server_8cpp.html',1,'']]],
+  ['game_5fserver_2eh_6',['game_server.h',['../game__server_8h.html',1,'']]],
+  ['game_5fwindow_2ecpp_7',['game_window.cpp',['../game__window_8cpp.html',1,'']]],
+  ['game_5fwindow_2eh_8',['game_window.h',['../game__window_8h.html',1,'']]],
+  ['gamecoordinator_9',['GameCoordinator',['../class_game_coordinator.html',1,'']]],
+  ['gamelistwindow_10',['GameListWindow',['../class_game_list_window.html',1,'GameListWindow'],['../class_game_list_window.html#a22d73a1307ebcbae526f91684078826b',1,'GameListWindow::GameListWindow(QWidget *parent=nullptr)']]],
+  ['games_11',['games',['../class_game_list_window.html#af92ac814a90993c3bef0756b459edb22',1,'GameListWindow']]],
+  ['gameserver_12',['GameServer',['../class_game_server.html',1,'']]],
+  ['gameui_13',['GameUI',['../struct_game_u_i.html',1,'']]],
+  ['get_5fgame_14',['GET_GAME',['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;application.cpp'],['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;application.cpp']]],
+  ['get_5frooms_15',['GET_ROOMS',['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;application.cpp'],['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;application.cpp']]],
+  ['getauthwindow_16',['getAuthWindow',['../class_renderer.html#ac472efa5a7dc69b06f2886de095f314b',1,'Renderer']]],
+  ['getfd_17',['getFd',['../class_socket.html#a14bd3f2524a429026584c6fb51b9742e',1,'Socket']]],
+  ['getgamelistwindow_18',['getGameListWindow',['../class_renderer.html#a1e9b3054a7ac6a21f9d5a3238ba7ce5b',1,'Renderer']]],
+  ['getinstance_19',['getInstance',['../class_game_server.html#a588419f7d78b27f71b4bb2446c67b7b8',1,'GameServer::getInstance()'],['../class_network.html#abf4ff7c03fdf445a08cf91ab25b83477',1,'Network::getInstance()'],['../class_database_repository.html#af6cd6e9c3d41186b3b90b48cf146bcc7',1,'DatabaseRepository::getInstance()'],['../class_application.html#aa3c1c63e078d14fb104431a15951a070',1,'Application::getInstance()'],['../class_game_coordinator.html#a08afbf38355c577d7eec406c9797094d',1,'GameCoordinator::getInstance()'],['../class_client.html#a718af1895e51cccfe90ca590f2f462c7',1,'Client::getInstance()'],['../class_renderer.html#a9e8b80c7a7041977283672274ade7e1e',1,'Renderer::getInstance()']]],
+  ['getleavebutton_20',['getLeaveButton',['../class_tic_tac_toe_window.html#a50a416ffe7c4160bb88f4afd52889b95',1,'TicTacToeWindow']]],
+  ['getselectedgameid_21',['getSelectedGameId',['../class_game_list_window.html#a7aca91475ffa4e33d3a06e5cc0bc3e59',1,'GameListWindow']]],
+  ['getsocket_22',['getSocket',['../class_client.html#aabfb0b445afe20b03d73f27afa044608',1,'Client']]],
+  ['gettictactoewindow_23',['getTicTacToeWindow',['../class_renderer.html#a94c90f119167727b5e198940ee7cb344',1,'Renderer']]]
+];

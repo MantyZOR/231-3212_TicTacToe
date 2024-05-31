@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Файл 231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/manager/game_coordinator.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ee282372bf31e7d2d2cc95f0ccd64f3e.html">231-3212_TicTacToe-frontend</a></li><li class="navelem"><a class="el" href="dir_26daf02fe65270af11cae5163db8dac5.html">231-3212_TicTacToe-frontend</a></li><li class="navelem"><a class="el" href="dir_46e2ae0f9d145109be3b9dae7ffb1859.html">src</a></li><li class="navelem"><a class="el" href="dir_26ede007fffaa9f16043a3f811afb60d.html">manager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#enum-members">Перечисления</a>  </div>
+  <div class="headertitle"><div class="title">Файл game_coordinator.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+</div>
+<p><a href="game__coordinator_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game.html">Game</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура, представляющая данные об игре.  <a href="struct_game.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_coordinator.html">GameCoordinator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, отвечающий за координацию игрового процесса.  <a href="class_game_coordinator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ad5292c4e76abc657b113de5594268aa9" id="r_ad5292c4e76abc657b113de5594268aa9"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5292c4e76abc657b113de5594268aa9">CellState</a> { <a class="el" href="#ad5292c4e76abc657b113de5594268aa9aba2b45bdc11e2a4a6e86aab2ac693cbb">EMPTY</a> = 0
+, <a class="el" href="#ad5292c4e76abc657b113de5594268aa9a02129bb861061d1a052c592e2dc6b383">X</a> = 1
+, <a class="el" href="#ad5292c4e76abc657b113de5594268aa9af186217753c37b9b9f958d906208506e">O</a> = 2
+ }</td></tr>
+<tr class="memdesc:ad5292c4e76abc657b113de5594268aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перечисление состояний ячейки игрового поля.  <a href="#ad5292c4e76abc657b113de5594268aa9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad5292c4e76abc657b113de5594268aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="ad5292c4e76abc657b113de5594268aa9" name="ad5292c4e76abc657b113de5594268aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5292c4e76abc657b113de5594268aa9">&#9670;&#160;</a></span>CellState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ad5292c4e76abc657b113de5594268aa9">CellState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Перечисление состояний ячейки игрового поля. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ad5292c4e76abc657b113de5594268aa9aba2b45bdc11e2a4a6e86aab2ac693cbb" name="ad5292c4e76abc657b113de5594268aa9aba2b45bdc11e2a4a6e86aab2ac693cbb"></a>EMPTY&#160;</td><td class="fielddoc"><p>Пустая ячейка. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad5292c4e76abc657b113de5594268aa9a02129bb861061d1a052c592e2dc6b383" name="ad5292c4e76abc657b113de5594268aa9a02129bb861061d1a052c592e2dc6b383"></a>X&#160;</td><td class="fielddoc"><p>Ячейка с символом "X". </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad5292c4e76abc657b113de5594268aa9af186217753c37b9b9f958d906208506e" name="ad5292c4e76abc657b113de5594268aa9af186217753c37b9b9f958d906208506e"></a>O&#160;</td><td class="fielddoc"><p>Ячейка с символом "O". </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="game__coordinator_8h_source.html">game_coordinator.h</a> строка <a class="el" href="game__coordinator_8h_source.html#l00011">11</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

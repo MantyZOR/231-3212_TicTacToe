@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Класс Renderer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="class_renderer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Renderer</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, отвечающий за отрисовку пользовательского интерфейса.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="renderer_8h_source.html">renderer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af7e5f8f68742f198e315fb4683a605a4" id="r_af7e5f8f68742f198e315fb4683a605a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7e5f8f68742f198e315fb4683a605a4">render</a> ()</td></tr>
+<tr class="memdesc:af7e5f8f68742f198e315fb4683a605a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отображает главное окно приложения.  <br /></td></tr>
+<tr class="separator:af7e5f8f68742f198e315fb4683a605a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac472efa5a7dc69b06f2886de095f314b" id="r_ac472efa5a7dc69b06f2886de095f314b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_auth_window.html">AuthWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac472efa5a7dc69b06f2886de095f314b">getAuthWindow</a> ()</td></tr>
+<tr class="memdesc:ac472efa5a7dc69b06f2886de095f314b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает указатель на объект окна авторизации.  <br /></td></tr>
+<tr class="separator:ac472efa5a7dc69b06f2886de095f314b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9b3054a7ac6a21f9d5a3238ba7ce5b" id="r_a1e9b3054a7ac6a21f9d5a3238ba7ce5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_list_window.html">GameListWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e9b3054a7ac6a21f9d5a3238ba7ce5b">getGameListWindow</a> ()</td></tr>
+<tr class="memdesc:a1e9b3054a7ac6a21f9d5a3238ba7ce5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает указатель на объект окна списка игр.  <br /></td></tr>
+<tr class="separator:a1e9b3054a7ac6a21f9d5a3238ba7ce5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c90f119167727b5e198940ee7cb344" id="r_a94c90f119167727b5e198940ee7cb344"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tic_tac_toe_window.html">TicTacToeWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94c90f119167727b5e198940ee7cb344">getTicTacToeWindow</a> ()</td></tr>
+<tr class="memdesc:a94c90f119167727b5e198940ee7cb344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает указатель на объект окна игры.  <br /></td></tr>
+<tr class="separator:a94c90f119167727b5e198940ee7cb344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bba3de1b1e2b7425d478580ed2982bd" id="r_a2bba3de1b1e2b7425d478580ed2982bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bba3de1b1e2b7425d478580ed2982bd">changeWindow</a> (QWidget *window)</td></tr>
+<tr class="memdesc:a2bba3de1b1e2b7425d478580ed2982bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переключает текущее активное окно.  <br /></td></tr>
+<tr class="separator:a2bba3de1b1e2b7425d478580ed2982bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a9e8b80c7a7041977283672274ade7e1e" id="r_a9e8b80c7a7041977283672274ade7e1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_renderer.html">Renderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e8b80c7a7041977283672274ade7e1e">getInstance</a> ()</td></tr>
+<tr class="memdesc:a9e8b80c7a7041977283672274ade7e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает единственный экземпляр класса <a class="el" href="class_renderer.html" title="Класс, отвечающий за отрисовку пользовательского интерфейса.">Renderer</a>.  <br /></td></tr>
+<tr class="separator:a9e8b80c7a7041977283672274ade7e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, отвечающий за отрисовку пользовательского интерфейса. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="renderer_8h_source.html">renderer.h</a> строка <a class="el" href="renderer_8h_source.html#l00015">15</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a2bba3de1b1e2b7425d478580ed2982bd" name="a2bba3de1b1e2b7425d478580ed2982bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bba3de1b1e2b7425d478580ed2982bd">&#9670;&#160;</a></span>changeWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::changeWindow </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Переключает текущее активное окно. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>Указатель на объект окна, которое нужно сделать активным. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="renderer_8cpp_source.html">renderer.cpp</a> строка <a class="el" href="renderer_8cpp_source.html#l00081">81</a></p>
+
+</div>
+</div>
+<a id="ac472efa5a7dc69b06f2886de095f314b" name="ac472efa5a7dc69b06f2886de095f314b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac472efa5a7dc69b06f2886de095f314b">&#9670;&#160;</a></span>getAuthWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_auth_window.html">AuthWindow</a> * Renderer::getAuthWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на объект окна авторизации. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на объект <a class="el" href="class_auth_window.html" title="Класс, представляющий окно авторизации.">AuthWindow</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="renderer_8cpp_source.html">renderer.cpp</a> строка <a class="el" href="renderer_8cpp_source.html#l00051">51</a></p>
+
+</div>
+</div>
+<a id="a1e9b3054a7ac6a21f9d5a3238ba7ce5b" name="a1e9b3054a7ac6a21f9d5a3238ba7ce5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9b3054a7ac6a21f9d5a3238ba7ce5b">&#9670;&#160;</a></span>getGameListWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_list_window.html">GameListWindow</a> * Renderer::getGameListWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на объект окна списка игр. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на объект <a class="el" href="class_game_list_window.html" title="Класс, представляющий окно со списком доступных игр.">GameListWindow</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="renderer_8cpp_source.html">renderer.cpp</a> строка <a class="el" href="renderer_8cpp_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<a id="a9e8b80c7a7041977283672274ade7e1e" name="a9e8b80c7a7041977283672274ade7e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8b80c7a7041977283672274ade7e1e">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a> &amp; Renderer::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает единственный экземпляр класса <a class="el" href="class_renderer.html" title="Класс, отвечающий за отрисовку пользовательского интерфейса.">Renderer</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на единственный экземпляр класса <a class="el" href="class_renderer.html" title="Класс, отвечающий за отрисовку пользовательского интерфейса.">Renderer</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="renderer_8cpp_source.html">renderer.cpp</a> строка <a class="el" href="renderer_8cpp_source.html#l00008">8</a></p>
+
+</div>
+</div>
+<a id="a94c90f119167727b5e198940ee7cb344" name="a94c90f119167727b5e198940ee7cb344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c90f119167727b5e198940ee7cb344">&#9670;&#160;</a></span>getTicTacToeWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tic_tac_toe_window.html">TicTacToeWindow</a> * Renderer::getTicTacToeWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на объект окна игры. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на объект <a class="el" href="class_tic_tac_toe_window.html" title="Класс, представляющий окно игры &quot;Крестики-нолики&quot;.">TicTacToeWindow</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="renderer_8cpp_source.html">renderer.cpp</a> строка <a class="el" href="renderer_8cpp_source.html#l00071">71</a></p>
+
+</div>
+</div>
+<a id="af7e5f8f68742f198e315fb4683a605a4" name="af7e5f8f68742f198e315fb4683a605a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e5f8f68742f198e315fb4683a605a4">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderer::render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отображает главное окно приложения. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="renderer_8cpp_source.html">renderer.cpp</a> строка <a class="el" href="renderer_8cpp_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/ui/<a class="el" href="renderer_8h_source.html">renderer.h</a></li>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/ui/<a class="el" href="renderer_8cpp_source.html">renderer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

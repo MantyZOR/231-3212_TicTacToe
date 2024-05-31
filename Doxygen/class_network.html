@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Класс Network</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="class_network-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Network</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, отвечающий за сетевое взаимодействие на стороне сервера.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="network_8h_source.html">network.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a8ceee61d6f11299daeb2b2ebe404bc8b" id="r_a8ceee61d6f11299daeb2b2ebe404bc8b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ceee61d6f11299daeb2b2ebe404bc8b">Callback</a> = std::function&lt;void(<a class="el" href="class_socket.html">Socket</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:a8ceee61d6f11299daeb2b2ebe404bc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип функции обратного вызова для обработки входящих соединений.  <br /></td></tr>
+<tr class="separator:a8ceee61d6f11299daeb2b2ebe404bc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a200d76bd171e0a58ce8492e44e7c8a59" id="r_a200d76bd171e0a58ce8492e44e7c8a59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a200d76bd171e0a58ce8492e44e7c8a59">startListening</a> ()</td></tr>
+<tr class="memdesc:a200d76bd171e0a58ce8492e44e7c8a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает прослушивание порта для входящих соединений.  <br /></td></tr>
+<tr class="separator:a200d76bd171e0a58ce8492e44e7c8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5773dcca32d16e5832c7fb43df1233ad" id="r_a5773dcca32d16e5832c7fb43df1233ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5773dcca32d16e5832c7fb43df1233ad">handleConnection</a> (const <a class="el" href="#a8ceee61d6f11299daeb2b2ebe404bc8b">Callback</a> &amp;callback) const</td></tr>
+<tr class="memdesc:a5773dcca32d16e5832c7fb43df1233ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает входящее соединение от клиента.  <br /></td></tr>
+<tr class="separator:a5773dcca32d16e5832c7fb43df1233ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:abf4ff7c03fdf445a08cf91ab25b83477" id="r_abf4ff7c03fdf445a08cf91ab25b83477"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_network.html">Network</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf4ff7c03fdf445a08cf91ab25b83477">getInstance</a> ()</td></tr>
+<tr class="memdesc:abf4ff7c03fdf445a08cf91ab25b83477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает единственный экземпляр класса <a class="el" href="class_network.html" title="Класс, отвечающий за сетевое взаимодействие на стороне сервера.">Network</a> (Singleton).  <br /></td></tr>
+<tr class="separator:abf4ff7c03fdf445a08cf91ab25b83477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, отвечающий за сетевое взаимодействие на стороне сервера. </p>
+<p>Обеспечивает прослушивание порта и обработку входящих соединений. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="network_8h_source.html">network.h</a> строка <a class="el" href="network_8h_source.html#l00012">12</a></p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a8ceee61d6f11299daeb2b2ebe404bc8b" name="a8ceee61d6f11299daeb2b2ebe404bc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ceee61d6f11299daeb2b2ebe404bc8b">&#9670;&#160;</a></span>Callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a8ceee61d6f11299daeb2b2ebe404bc8b">Network::Callback</a> = std::function&lt;void(<a class="el" href="class_socket.html">Socket</a> &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тип функции обратного вызова для обработки входящих соединений. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Socket&amp;</td><td>- ссылка на сокет клиента. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="network_8h_source.html">network.h</a> строка <a class="el" href="network_8h_source.html#l00034">34</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="abf4ff7c03fdf445a08cf91ab25b83477" name="abf4ff7c03fdf445a08cf91ab25b83477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4ff7c03fdf445a08cf91ab25b83477">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_network.html">Network</a> &amp; Network::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает единственный экземпляр класса <a class="el" href="class_network.html" title="Класс, отвечающий за сетевое взаимодействие на стороне сервера.">Network</a> (Singleton). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на единственный экземпляр. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="network_8h_source.html">network.h</a> строка <a class="el" href="network_8h_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="a5773dcca32d16e5832c7fb43df1233ad" name="a5773dcca32d16e5832c7fb43df1233ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5773dcca32d16e5832c7fb43df1233ad">&#9670;&#160;</a></span>handleConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::handleConnection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a8ceee61d6f11299daeb2b2ebe404bc8b">Callback</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обрабатывает входящее соединение от клиента. </p>
+<p>Обрабатывает входящие соединения от клиентов.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>Функция обратного вызова, которая будет вызвана для обработки соединения.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Принимает входящее соединение, создает объект <a class="el" href="class_socket.html" title="Класс, инкапсулирующий работу с сокетами.">Socket</a> для клиента, и вызывает функцию обратного вызова, переданную в качестве аргумента.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>Функция обратного вызова для обработки соединения с клиентом.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при принятии соединения. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="network_8cpp_source.html">network.cpp</a> строка <a class="el" href="network_8cpp_source.html#l00039">39</a></p>
+
+</div>
+</div>
+<a id="a200d76bd171e0a58ce8492e44e7c8a59" name="a200d76bd171e0a58ce8492e44e7c8a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200d76bd171e0a58ce8492e44e7c8a59">&#9670;&#160;</a></span>startListening()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::startListening </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запускает прослушивание порта для входящих соединений. </p>
+<p>Запускает прослушивание порта.</p>
+<p>Создает сокет, связывает его с адресом и портом, и переводит сокет в режим прослушивания.</p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>в случае ошибки при создании сокета, связывании с адресом, или переводе в режим прослушивания. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="network_8cpp_source.html">network.cpp</a> строка <a class="el" href="network_8cpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>231-3212_TicTacToe-backend/231-3212_TicTacToe-backend/src/network/<a class="el" href="network_8h_source.html">network.h</a></li>
+<li>231-3212_TicTacToe-backend/231-3212_TicTacToe-backend/src/network/<a class="el" href="network_8cpp_source.html">network.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

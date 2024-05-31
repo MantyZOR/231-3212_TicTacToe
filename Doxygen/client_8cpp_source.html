@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Исходный файл 231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/network/client.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ee282372bf31e7d2d2cc95f0ccd64f3e.html">231-3212_TicTacToe-frontend</a></li><li class="navelem"><a class="el" href="dir_26daf02fe65270af11cae5163db8dac5.html">231-3212_TicTacToe-frontend</a></li><li class="navelem"><a class="el" href="dir_46e2ae0f9d145109be3b9dae7ffb1859.html">src</a></li><li class="navelem"><a class="el" href="dir_b9e50395ee9d6c1e97acf81ad80f36c0.html">network</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">client.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="client_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="client_8h.html">client.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_client.html#a718af1895e51cccfe90ca590f2f462c7">    8</a></span><a class="code hl_class" href="class_client.html">Client</a>&amp; <a class="code hl_function" href="class_client.html#a718af1895e51cccfe90ca590f2f462c7">Client::getInstance</a>()</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_client.html">Client</a> instance; <span class="comment">// Создаем статический экземпляр класса Client</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>Client::Client() : socket(std::make_unique&lt;QTcpSocket&gt;()) </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Тело конструктора намеренно оставлено пустым</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_client.html#a62c947c8a48e82741b2b65ff8f4eff01">   30</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_client.html#a62c947c8a48e82741b2b65ff8f4eff01">Client::connectToHost</a>(<span class="keyword">const</span> QString&amp; host, quint16 port)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    socket-&gt;connectToHost(host, port); <span class="comment">// Вызываем метод connectToHost объекта QTcpSocket</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_client.html#aee22280bd5bd141a296d681e622a565a">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_client.html#aee22280bd5bd141a296d681e622a565a">Client::writeData</a>(<span class="keyword">const</span> QString&amp; data)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    socket-&gt;write(data.toUtf8()); <span class="comment">// Преобразуем QString в массив байтов UTF-8 и отправляем его</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_client.html#a07b30d9ce2f3003a0067228a32cf07ae">   50</a></span>QByteArray <a class="code hl_function" href="class_client.html#a07b30d9ce2f3003a0067228a32cf07ae">Client::readData</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> socket-&gt;readAll(); <span class="comment">// Читаем все доступные данные из сокета</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_client.html#aabfb0b445afe20b03d73f27afa044608">   60</a></span>QTcpSocket* <a class="code hl_function" href="class_client.html#aabfb0b445afe20b03d73f27afa044608">Client::getSocket</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> socket.get(); <span class="comment">// Возвращаем указатель на объект QTcpSocket</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+</div>
+<div class="ttc" id="aclass_client_html"><div class="ttname"><a href="class_client.html">Client</a></div><div class="ttdoc">Класс для работы с сетевым клиентом.</div><div class="ttdef"><b>Definition</b> <a href="client_8h_source.html#l00011">client.h:12</a></div></div>
+<div class="ttc" id="aclass_client_html_a07b30d9ce2f3003a0067228a32cf07ae"><div class="ttname"><a href="class_client.html#a07b30d9ce2f3003a0067228a32cf07ae">Client::readData</a></div><div class="ttdeci">QByteArray readData()</div><div class="ttdoc">Читает данные, полученные от сервера.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">client.cpp:50</a></div></div>
+<div class="ttc" id="aclass_client_html_a62c947c8a48e82741b2b65ff8f4eff01"><div class="ttname"><a href="class_client.html#a62c947c8a48e82741b2b65ff8f4eff01">Client::connectToHost</a></div><div class="ttdeci">void connectToHost(const QString &amp;host, quint16 port) const</div><div class="ttdoc">Подключается к серверу.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">client.cpp:30</a></div></div>
+<div class="ttc" id="aclass_client_html_a718af1895e51cccfe90ca590f2f462c7"><div class="ttname"><a href="class_client.html#a718af1895e51cccfe90ca590f2f462c7">Client::getInstance</a></div><div class="ttdeci">static Client &amp; getInstance()</div><div class="ttdoc">Возвращает единственный экземпляр класса Client.</div><div class="ttdef"><b>Definition</b> <a href="#l00008">client.cpp:8</a></div></div>
+<div class="ttc" id="aclass_client_html_aabfb0b445afe20b03d73f27afa044608"><div class="ttname"><a href="class_client.html#aabfb0b445afe20b03d73f27afa044608">Client::getSocket</a></div><div class="ttdeci">QTcpSocket * getSocket() const</div><div class="ttdoc">Возвращает указатель на объект сокета.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">client.cpp:60</a></div></div>
+<div class="ttc" id="aclass_client_html_aee22280bd5bd141a296d681e622a565a"><div class="ttname"><a href="class_client.html#aee22280bd5bd141a296d681e622a565a">Client::writeData</a></div><div class="ttdeci">void writeData(const QString &amp;data)</div><div class="ttdoc">Отправляет данные на сервер.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">client.cpp:40</a></div></div>
+<div class="ttc" id="aclient_8h_html"><div class="ttname"><a href="client_8h.html">client.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

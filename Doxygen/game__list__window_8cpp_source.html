@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Исходный файл 231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/ui/components/game_list_window.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ee282372bf31e7d2d2cc95f0ccd64f3e.html">231-3212_TicTacToe-frontend</a></li><li class="navelem"><a class="el" href="dir_26daf02fe65270af11cae5163db8dac5.html">231-3212_TicTacToe-frontend</a></li><li class="navelem"><a class="el" href="dir_46e2ae0f9d145109be3b9dae7ffb1859.html">src</a></li><li class="navelem"><a class="el" href="dir_d5f0f3329b23c337267b917435e34775.html">ui</a></li><li class="navelem"><a class="el" href="dir_8d5d349e1e1c82579d8c12d2d8bf4ffe.html">components</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">game_list_window.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="game__list__window_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="game__list__window_8h.html">game_list_window.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_game_list_window.html#a22d73a1307ebcbae526f91684078826b">    5</a></span><a class="code hl_function" href="class_game_list_window.html#a22d73a1307ebcbae526f91684078826b">GameListWindow::GameListWindow</a>(QWidget* parent) : QWidget(parent)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    QVBoxLayout* <a class="code hl_variable" href="class_game_list_window.html#a644ddc340e206cb84f75d257613271fd">layout</a> = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">// layout-&gt;addWidget(&amp;inputSearch);</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_variable" href="class_game_list_window.html#a644ddc340e206cb84f75d257613271fd">layout</a>-&gt;addWidget(&amp;<a class="code hl_variable" href="class_game_list_window.html#a80c5fb562d5015dd0d7482de689b265b">listGames</a>);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_variable" href="class_game_list_window.html#a644ddc340e206cb84f75d257613271fd">layout</a>-&gt;addWidget(&amp;<a class="code hl_variable" href="class_game_list_window.html#af1f4bd0fd9979ba68e89a87df63279de">buttonConnect</a>);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_variable" href="class_game_list_window.html#a644ddc340e206cb84f75d257613271fd">layout</a>-&gt;addWidget(&amp;<a class="code hl_variable" href="class_game_list_window.html#a75450a3cf08e1550f732fc39f34a01b6">buttonCreateRoom</a>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// inputSearch.setPlaceholderText(&quot;Search games...&quot;);</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_variable" href="class_game_list_window.html#af1f4bd0fd9979ba68e89a87df63279de">buttonConnect</a>.setText(<span class="stringliteral">&quot;Connect&quot;</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_variable" href="class_game_list_window.html#a75450a3cf08e1550f732fc39f34a01b6">buttonCreateRoom</a>.setText(<span class="stringliteral">&quot;Create Game&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    setLayout(<a class="code hl_variable" href="class_game_list_window.html#a644ddc340e206cb84f75d257613271fd">layout</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_game_list_window.html#a38ecbfe8cc9779d1896ddd2163d0329b">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_list_window.html#a38ecbfe8cc9779d1896ddd2163d0329b">GameListWindow::FillGames</a>(<span class="keyword">const</span> std::vector&lt;GameUI&gt;&amp; games)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    this-&gt;games = <a class="code hl_variable" href="class_game_list_window.html#af92ac814a90993c3bef0756b459edb22">games</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="class_game_list_window.html#a80c5fb562d5015dd0d7482de689b265b">listGames</a>.clear();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [<span class="keywordtype">id</span>, name] : <a class="code hl_variable" href="class_game_list_window.html#af92ac814a90993c3bef0756b459edb22">games</a>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="class_game_list_window.html#a80c5fb562d5015dd0d7482de689b265b">listGames</a>.addItem(QString::fromStdString(name));</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_game_list_window.html#a7aca91475ffa4e33d3a06e5cc0bc3e59">   29</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="class_game_list_window.html#a7aca91475ffa4e33d3a06e5cc0bc3e59">GameListWindow::getSelectedGameId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_game_list_window.html#a80c5fb562d5015dd0d7482de689b265b">listGames</a>.currentRow() &lt; 0)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_list_window.html#af92ac814a90993c3bef0756b459edb22">games</a>[<a class="code hl_variable" href="class_game_list_window.html#a80c5fb562d5015dd0d7482de689b265b">listGames</a>.currentRow()].id;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+</div>
+<div class="ttc" id="aclass_game_list_window_html_a22d73a1307ebcbae526f91684078826b"><div class="ttname"><a href="class_game_list_window.html#a22d73a1307ebcbae526f91684078826b">GameListWindow::GameListWindow</a></div><div class="ttdeci">GameListWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Конструктор класса GameListWindow.</div><div class="ttdef"><b>Definition</b> <a href="#l00005">game_list_window.cpp:5</a></div></div>
+<div class="ttc" id="aclass_game_list_window_html_a38ecbfe8cc9779d1896ddd2163d0329b"><div class="ttname"><a href="class_game_list_window.html#a38ecbfe8cc9779d1896ddd2163d0329b">GameListWindow::FillGames</a></div><div class="ttdeci">void FillGames(const std::vector&lt; GameUI &gt; &amp;games)</div><div class="ttdoc">Заполняет список игр.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">game_list_window.cpp:19</a></div></div>
+<div class="ttc" id="aclass_game_list_window_html_a644ddc340e206cb84f75d257613271fd"><div class="ttname"><a href="class_game_list_window.html#a644ddc340e206cb84f75d257613271fd">GameListWindow::layout</a></div><div class="ttdeci">QVBoxLayout layout</div><div class="ttdef"><b>Definition</b> <a href="game__list__window_8h_source.html#l00052">game_list_window.h:52</a></div></div>
+<div class="ttc" id="aclass_game_list_window_html_a75450a3cf08e1550f732fc39f34a01b6"><div class="ttname"><a href="class_game_list_window.html#a75450a3cf08e1550f732fc39f34a01b6">GameListWindow::buttonCreateRoom</a></div><div class="ttdeci">QPushButton buttonCreateRoom</div><div class="ttdef"><b>Definition</b> <a href="game__list__window_8h_source.html#l00056">game_list_window.h:56</a></div></div>
+<div class="ttc" id="aclass_game_list_window_html_a7aca91475ffa4e33d3a06e5cc0bc3e59"><div class="ttname"><a href="class_game_list_window.html#a7aca91475ffa4e33d3a06e5cc0bc3e59">GameListWindow::getSelectedGameId</a></div><div class="ttdeci">int getSelectedGameId() const</div><div class="ttdoc">Возвращает идентификатор выбранной игры.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">game_list_window.cpp:29</a></div></div>
+<div class="ttc" id="aclass_game_list_window_html_a80c5fb562d5015dd0d7482de689b265b"><div class="ttname"><a href="class_game_list_window.html#a80c5fb562d5015dd0d7482de689b265b">GameListWindow::listGames</a></div><div class="ttdeci">QListWidget listGames</div><div class="ttdef"><b>Definition</b> <a href="game__list__window_8h_source.html#l00054">game_list_window.h:54</a></div></div>
+<div class="ttc" id="aclass_game_list_window_html_af1f4bd0fd9979ba68e89a87df63279de"><div class="ttname"><a href="class_game_list_window.html#af1f4bd0fd9979ba68e89a87df63279de">GameListWindow::buttonConnect</a></div><div class="ttdeci">QPushButton buttonConnect</div><div class="ttdef"><b>Definition</b> <a href="game__list__window_8h_source.html#l00055">game_list_window.h:55</a></div></div>
+<div class="ttc" id="aclass_game_list_window_html_af92ac814a90993c3bef0756b459edb22"><div class="ttname"><a href="class_game_list_window.html#af92ac814a90993c3bef0756b459edb22">GameListWindow::games</a></div><div class="ttdeci">std::vector&lt; GameUI &gt; games</div><div class="ttdef"><b>Definition</b> <a href="game__list__window_8h_source.html#l00057">game_list_window.h:57</a></div></div>
+<div class="ttc" id="agame__list__window_8h_html"><div class="ttname"><a href="game__list__window_8h.html">game_list_window.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

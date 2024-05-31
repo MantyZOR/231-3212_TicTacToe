@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['get_5fgame_0',['GET_GAME',['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;application.cpp'],['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19',1,'GET_GAME:&#160;application.cpp']]],
+  ['get_5frooms_1',['GET_ROOMS',['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;application.cpp'],['../game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;game_server.cpp'],['../application_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac',1,'GET_ROOMS:&#160;application.cpp']]]
+];

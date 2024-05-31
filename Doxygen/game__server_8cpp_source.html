@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Исходный файл 231-3212_TicTacToe-backend/231-3212_TicTacToe-backend/src/game/game_server.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_27364a83f92c92f9e8b2ae62ec45ce3c.html">231-3212_TicTacToe-backend</a></li><li class="navelem"><a class="el" href="dir_8420fa0a1f73b159e01c2af4adcd6805.html">231-3212_TicTacToe-backend</a></li><li class="navelem"><a class="el" href="dir_1bec7fba24fccf112b36a8564e53e2a2.html">src</a></li><li class="navelem"><a class="el" href="dir_8433529900f5bc120e5d8e3c1b99802c.html">game</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">game_server.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="game__server_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="game__server_8h.html">game_server.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;format&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="database__repository_8h.html">../repository/database_repository.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><a class="code hl_class" href="class_game_server.html">GameServer</a> GameServer::instance;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_game_server.html#a588419f7d78b27f71b4bb2446c67b7b8">   17</a></span><a class="code hl_class" href="class_game_server.html">GameServer</a> &amp;<a class="code hl_function" href="class_game_server.html#a588419f7d78b27f71b4bb2446c67b7b8">GameServer::getInstance</a>() {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>GameServer::GameServer()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    : connectionHandler(handleConnection) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// Тело конструктора намеренно оставлено пустым.</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_game_server.html#a56180e165818a3ddbdfa6ddbef25bb75">   36</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game_server.html#a56180e165818a3ddbdfa6ddbef25bb75">GameServer::start</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="comment">// Получаем экземпляр репозитория базы данных.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">auto</span> &amp;repository = <a class="code hl_function" href="class_database_repository.html#af6cd6e9c3d41186b3b90b48cf146bcc7">DatabaseRepository::getInstance</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="comment">// Подключаемся к базе данных.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  repository.connectToDatabase();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">// Создаем таблицы, если они не существуют.</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  repository.createTables();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="comment">// Получаем экземпляр сетевого модуля.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">auto</span> &amp;network = <a class="code hl_function" href="class_network.html#abf4ff7c03fdf445a08cf91ab25b83477">Network::getInstance</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="comment">// Запускаем прослушивание порта.</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  network.startListening();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="comment">// Устанавливаем обработчик для входящих соединений.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  network.handleConnection(connectionHandler);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109">   55</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109">STATUS_CODES</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109ad17455cfcb88a53f1603fb817e09c2d6">REGISTER</a> = 0,      </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a5963e9e09d4377b30d30799d150a1da8">AUTHENTICATE</a> = 1,   </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109ae0e70e06afef3cc16ef36d5df12b5498">CREATE_ROOM</a> = 2,    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109aadf514cea175147266ce983342569c43">JOIN_ROOM</a> = 3,       </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a5e06c0fa0c26747bc205909c36906c08">LEAVE_ROOM</a> = 4,      </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac">GET_ROOMS</a> = 5,       </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109ae58a1b00942e66d8b4abc960da7877ab">ACTION</a> = 6,          </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_enumvalue" href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19">GET_GAME</a> = 7,        </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// ... (остальной код с комментариями) ...</span></div>
+<div class="ttc" id="aclass_database_repository_html_af6cd6e9c3d41186b3b90b48cf146bcc7"><div class="ttname"><a href="class_database_repository.html#af6cd6e9c3d41186b3b90b48cf146bcc7">DatabaseRepository::getInstance</a></div><div class="ttdeci">static DatabaseRepository &amp; getInstance()</div><div class="ttdoc">Возвращает единственный экземпляр класса DatabaseRepository.</div><div class="ttdef"><b>Definition</b> <a href="database__repository_8cpp_source.html#l00018">database_repository.cpp:18</a></div></div>
+<div class="ttc" id="aclass_game_server_html"><div class="ttname"><a href="class_game_server.html">GameServer</a></div><div class="ttdoc">Класс, отвечающий за обработку игровой логики на стороне сервера.</div><div class="ttdef"><b>Definition</b> <a href="game__server_8h_source.html#l00009">game_server.h:9</a></div></div>
+<div class="ttc" id="aclass_game_server_html_a56180e165818a3ddbdfa6ddbef25bb75"><div class="ttname"><a href="class_game_server.html#a56180e165818a3ddbdfa6ddbef25bb75">GameServer::start</a></div><div class="ttdeci">void start() const</div><div class="ttdoc">Запускает игровой сервер.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">game_server.cpp:36</a></div></div>
+<div class="ttc" id="aclass_game_server_html_a588419f7d78b27f71b4bb2446c67b7b8"><div class="ttname"><a href="class_game_server.html#a588419f7d78b27f71b4bb2446c67b7b8">GameServer::getInstance</a></div><div class="ttdeci">static GameServer &amp; getInstance()</div><div class="ttdoc">Возвращает единственный экземпляр класса GameServer (Singleton).</div><div class="ttdef"><b>Definition</b> <a href="#l00017">game_server.cpp:17</a></div></div>
+<div class="ttc" id="aclass_network_html_abf4ff7c03fdf445a08cf91ab25b83477"><div class="ttname"><a href="class_network.html#abf4ff7c03fdf445a08cf91ab25b83477">Network::getInstance</a></div><div class="ttdeci">static Network &amp; getInstance()</div><div class="ttdoc">Возвращает единственный экземпляр класса Network (Singleton).</div><div class="ttdef"><b>Definition</b> <a href="network_8h_source.html#l00018">network.h:18</a></div></div>
+<div class="ttc" id="adatabase__repository_8h_html"><div class="ttname"><a href="database__repository_8h.html">database_repository.h</a></div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109">STATUS_CODES</a></div><div class="ttdeci">STATUS_CODES</div><div class="ttdoc">Перечисление кодов состояния для сетевых сообщений.</div><div class="ttdef"><b>Definition</b> <a href="#l00055">game_server.cpp:55</a></div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a065dc5f3c318f199446d41d4c5b48c19">STATUS_CODES::GET_GAME</a></div><div class="ttdeci">@ GET_GAME</div><div class="ttdoc">Код для получения текущего состояния игры.</div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a136ed59803ad32a2a7d349dbd239cfac">STATUS_CODES::GET_ROOMS</a></div><div class="ttdeci">@ GET_ROOMS</div><div class="ttdoc">Код для получения списка доступных игровых комнат.</div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109a5963e9e09d4377b30d30799d150a1da8"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a5963e9e09d4377b30d30799d150a1da8">STATUS_CODES::AUTHENTICATE</a></div><div class="ttdeci">@ AUTHENTICATE</div><div class="ttdoc">Код для аутентификации пользователя.</div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109a5e06c0fa0c26747bc205909c36906c08"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109a5e06c0fa0c26747bc205909c36906c08">STATUS_CODES::LEAVE_ROOM</a></div><div class="ttdeci">@ LEAVE_ROOM</div><div class="ttdoc">Код для выхода из игровой комнаты.</div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109aadf514cea175147266ce983342569c43"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109aadf514cea175147266ce983342569c43">STATUS_CODES::JOIN_ROOM</a></div><div class="ttdeci">@ JOIN_ROOM</div><div class="ttdoc">Код для присоединения к существующей игровой комнате.</div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109ad17455cfcb88a53f1603fb817e09c2d6"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109ad17455cfcb88a53f1603fb817e09c2d6">STATUS_CODES::REGISTER</a></div><div class="ttdeci">@ REGISTER</div><div class="ttdoc">Код для регистрации нового пользователя.</div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109ae0e70e06afef3cc16ef36d5df12b5498"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109ae0e70e06afef3cc16ef36d5df12b5498">STATUS_CODES::CREATE_ROOM</a></div><div class="ttdeci">@ CREATE_ROOM</div><div class="ttdoc">Код для создания новой игровой комнаты.</div></div>
+<div class="ttc" id="agame__server_8cpp_html_a76e57ec8d918d6ca415bc377c35b5109ae58a1b00942e66d8b4abc960da7877ab"><div class="ttname"><a href="game__server_8cpp.html#a76e57ec8d918d6ca415bc377c35b5109ae58a1b00942e66d8b4abc960da7877ab">STATUS_CODES::ACTION</a></div><div class="ttdeci">@ ACTION</div><div class="ttdoc">Код для отправки действия игрока.</div></div>
+<div class="ttc" id="agame__server_8h_html"><div class="ttname"><a href="game__server_8h.html">game_server.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

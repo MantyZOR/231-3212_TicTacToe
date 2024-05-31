@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Класс Application</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="class_application-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Application</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс приложения, управляющий сетевыми соединениями и взаимодействием с сервером.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="application_8h_source.html">application.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Application:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_application.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ace40fdf1ea0f92dab92b0db9f5a773a0" id="r_ace40fdf1ea0f92dab92b0db9f5a773a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace40fdf1ea0f92dab92b0db9f5a773a0">setupConnections</a> ()</td></tr>
+<tr class="memdesc:ace40fdf1ea0f92dab92b0db9f5a773a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает сетевые соединения.  <br /></td></tr>
+<tr class="separator:ace40fdf1ea0f92dab92b0db9f5a773a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e60def7746285698cd802666171331" id="r_af6e60def7746285698cd802666171331"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6e60def7746285698cd802666171331">handleAuthenticate</a> (nlohmann::json &amp;message)</td></tr>
+<tr class="memdesc:af6e60def7746285698cd802666171331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает код состояния AUTHENTICATE.  <br /></td></tr>
+<tr class="separator:af6e60def7746285698cd802666171331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb522638fbc480054d30d423f2bea63" id="r_a6fb522638fbc480054d30d423f2bea63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fb522638fbc480054d30d423f2bea63">onAboutToQuit</a> ()</td></tr>
+<tr class="memdesc:a6fb522638fbc480054d30d423f2bea63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вызывается перед завершением работы приложения.  <br /></td></tr>
+<tr class="separator:a6fb522638fbc480054d30d423f2bea63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f613c41f65459d6825a825360c523b4" id="r_a6f613c41f65459d6825a825360c523b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f613c41f65459d6825a825360c523b4">sendAction</a> (const int cell)</td></tr>
+<tr class="memdesc:a6f613c41f65459d6825a825360c523b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет действие на сервер.  <br /></td></tr>
+<tr class="separator:a6f613c41f65459d6825a825360c523b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:aa3c1c63e078d14fb104431a15951a070" id="r_aa3c1c63e078d14fb104431a15951a070"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_application.html">Application</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3c1c63e078d14fb104431a15951a070">getInstance</a> ()</td></tr>
+<tr class="memdesc:aa3c1c63e078d14fb104431a15951a070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает единственный экземпляр класса <a class="el" href="class_application.html" title="Класс приложения, управляющий сетевыми соединениями и взаимодействием с сервером.">Application</a>.  <br /></td></tr>
+<tr class="separator:aa3c1c63e078d14fb104431a15951a070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс приложения, управляющий сетевыми соединениями и взаимодействием с сервером. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="application_8h_source.html">application.h</a> строка <a class="el" href="application_8h_source.html#l00011">11</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="aa3c1c63e078d14fb104431a15951a070" name="aa3c1c63e078d14fb104431a15951a070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c1c63e078d14fb104431a15951a070">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_application.html">Application</a> &amp; Application::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает единственный экземпляр класса <a class="el" href="class_application.html" title="Класс приложения, управляющий сетевыми соединениями и взаимодействием с сервером.">Application</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на единственный экземпляр класса <a class="el" href="class_application.html" title="Класс приложения, управляющий сетевыми соединениями и взаимодействием с сервером.">Application</a>.</dd></dl>
+<p>Используется паттерн Singleton для обеспечения единственности объекта <a class="el" href="class_application.html" title="Класс приложения, управляющий сетевыми соединениями и взаимодействием с сервером.">Application</a>.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на единственный экземпляр класса <a class="el" href="class_application.html" title="Класс приложения, управляющий сетевыми соединениями и взаимодействием с сервером.">Application</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="application_8cpp_source.html">application.cpp</a> строка <a class="el" href="application_8cpp_source.html#l00044">44</a></p>
+
+</div>
+</div>
+<a id="af6e60def7746285698cd802666171331" name="af6e60def7746285698cd802666171331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e60def7746285698cd802666171331">&#9670;&#160;</a></span>handleAuthenticate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::handleAuthenticate </td>
+          <td>(</td>
+          <td class="paramtype">nlohmann::json &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обрабатывает код состояния AUTHENTICATE. </p>
+<p>Обрабатывает сообщение об аутентификации от сервера.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>JSON-сообщение, полученное от сервера.</td></tr>
+    <tr><td class="paramname">message</td><td>JSON-сообщение от сервера. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="application_8cpp_source.html">application.cpp</a> строка <a class="el" href="application_8cpp_source.html#l00058">58</a></p>
+
+</div>
+</div>
+<a id="a6fb522638fbc480054d30d423f2bea63" name="a6fb522638fbc480054d30d423f2bea63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb522638fbc480054d30d423f2bea63">&#9670;&#160;</a></span>onAboutToQuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::onAboutToQuit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вызывается перед завершением работы приложения. </p>
+<p>Обработчик события, вызываемого перед завершением работы приложения. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="application_8cpp_source.html">application.cpp</a> строка <a class="el" href="application_8cpp_source.html#l00136">136</a></p>
+
+</div>
+</div>
+<a id="a6f613c41f65459d6825a825360c523b4" name="a6f613c41f65459d6825a825360c523b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f613c41f65459d6825a825360c523b4">&#9670;&#160;</a></span>sendAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::sendAction </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>cell</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправляет действие на сервер. </p>
+<p>Отправляет действие игрока на сервер.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cell</td><td>Индекс ячейки, на которую было совершено действие.</td></tr>
+    <tr><td class="paramname">cell</td><td>Индекс ячейки, на которую нажал игрок. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="application_8cpp_source.html">application.cpp</a> строка <a class="el" href="application_8cpp_source.html#l00146">146</a></p>
+
+</div>
+</div>
+<a id="ace40fdf1ea0f92dab92b0db9f5a773a0" name="ace40fdf1ea0f92dab92b0db9f5a773a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace40fdf1ea0f92dab92b0db9f5a773a0">&#9670;&#160;</a></span>setupConnections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Application::setupConnections </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает сетевые соединения. </p>
+<p>Устанавливает сетевые соединения и обработчики событий. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="application_8cpp_source.html">application.cpp</a> строка <a class="el" href="application_8cpp_source.html#l00128">128</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/manager/<a class="el" href="application_8h_source.html">application.h</a></li>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/manager/<a class="el" href="application_8cpp_source.html">application.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

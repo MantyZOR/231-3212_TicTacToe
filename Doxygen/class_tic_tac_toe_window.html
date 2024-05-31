@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Класс TicTacToeWindow</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_tic_tac_toe_window-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс TicTacToeWindow</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, представляющий окно игры "Крестики-нолики".  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="game__window_8h_source.html">game_window.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:TicTacToeWindow:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_tic_tac_toe_window.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:a81435a1039c94c6b9e69d2cc26b2f3a7" id="r_a81435a1039c94c6b9e69d2cc26b2f3a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81435a1039c94c6b9e69d2cc26b2f3a7">leaveGame</a> ()</td></tr>
+<tr class="memdesc:a81435a1039c94c6b9e69d2cc26b2f3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал, отправляемый при нажатии на кнопку "Выйти".  <br /></td></tr>
+<tr class="separator:a81435a1039c94c6b9e69d2cc26b2f3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a94109a7fc2739a91a680beb1b5439330" id="r_a94109a7fc2739a91a680beb1b5439330"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94109a7fc2739a91a680beb1b5439330">TicTacToeWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a94109a7fc2739a91a680beb1b5439330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса <a class="el" href="class_tic_tac_toe_window.html" title="Класс, представляющий окно игры &quot;Крестики-нолики&quot;.">TicTacToeWindow</a>.  <br /></td></tr>
+<tr class="separator:a94109a7fc2739a91a680beb1b5439330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a416ffe7c4160bb88f4afd52889b95" id="r_a50a416ffe7c4160bb88f4afd52889b95"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a416ffe7c4160bb88f4afd52889b95">getLeaveButton</a> ()</td></tr>
+<tr class="memdesc:a50a416ffe7c4160bb88f4afd52889b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает указатель на кнопку "Выйти".  <br /></td></tr>
+<tr class="separator:a50a416ffe7c4160bb88f4afd52889b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb33bbc33b1d5a7235327ccd61eacc2c" id="r_acb33bbc33b1d5a7235327ccd61eacc2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb33bbc33b1d5a7235327ccd61eacc2c">enableButtons</a> ()</td></tr>
+<tr class="memdesc:acb33bbc33b1d5a7235327ccd61eacc2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Активирует кнопки игрового поля.  <br /></td></tr>
+<tr class="separator:acb33bbc33b1d5a7235327ccd61eacc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27eac8735d1d0958d726cfe241e073a" id="r_aa27eac8735d1d0958d726cfe241e073a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa27eac8735d1d0958d726cfe241e073a">fill_buttons</a> (const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;state)</td></tr>
+<tr class="memdesc:aa27eac8735d1d0958d726cfe241e073a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заполняет кнопки игрового поля значениями X, O или пустотой.  <br /></td></tr>
+<tr class="separator:aa27eac8735d1d0958d726cfe241e073a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31e8259796b4c713695f76a2e9ebbb4" id="r_af31e8259796b4c713695f76a2e9ebbb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af31e8259796b4c713695f76a2e9ebbb4">check_winner</a> ()</td></tr>
+<tr class="memdesc:af31e8259796b4c713695f76a2e9ebbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, есть ли победитель в игре.  <br /></td></tr>
+<tr class="separator:af31e8259796b4c713695f76a2e9ebbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, представляющий окно игры "Крестики-нолики". </p>
+
+<p class="definition">См. определение в файле <a class="el" href="game__window_8h_source.html">game_window.h</a> строка <a class="el" href="game__window_8h_source.html#l00012">12</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a94109a7fc2739a91a680beb1b5439330" name="a94109a7fc2739a91a680beb1b5439330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94109a7fc2739a91a680beb1b5439330">&#9670;&#160;</a></span>TicTacToeWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TicTacToeWindow::TicTacToeWindow </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор класса <a class="el" href="class_tic_tac_toe_window.html" title="Класс, представляющий окно игры &quot;Крестики-нолики&quot;.">TicTacToeWindow</a>. </p>
+<p>Создает игровое поле 3x3, метку статуса игры и кнопку "Выйти".</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Указатель на родительский виджет (по умолчанию nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af31e8259796b4c713695f76a2e9ebbb4" name="af31e8259796b4c713695f76a2e9ebbb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31e8259796b4c713695f76a2e9ebbb4">&#9670;&#160;</a></span>check_winner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TicTacToeWindow::check_winner </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, есть ли победитель в игре. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если есть победитель, иначе false. </dd></dl>
+
+</div>
+</div>
+<a id="acb33bbc33b1d5a7235327ccd61eacc2c" name="acb33bbc33b1d5a7235327ccd61eacc2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb33bbc33b1d5a7235327ccd61eacc2c">&#9670;&#160;</a></span>enableButtons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicTacToeWindow::enableButtons </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Активирует кнопки игрового поля. </p>
+<p>Активирует кнопки игрового поля в зависимости от состояния игры. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="game__window_8cpp_source.html">game_window.cpp</a> строка <a class="el" href="game__window_8cpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="aa27eac8735d1d0958d726cfe241e073a" name="aa27eac8735d1d0958d726cfe241e073a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27eac8735d1d0958d726cfe241e073a">&#9670;&#160;</a></span>fill_buttons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicTacToeWindow::fill_buttons </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заполняет кнопки игрового поля значениями X, O или пустотой. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>Вектор 3x3, представляющий текущее состояние игрового поля. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50a416ffe7c4160bb88f4afd52889b95" name="a50a416ffe7c4160bb88f4afd52889b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a416ffe7c4160bb88f4afd52889b95">&#9670;&#160;</a></span>getLeaveButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton * TicTacToeWindow::getLeaveButton </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на кнопку "Выйти". </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на объект QPushButton. </dd></dl>
+
+</div>
+</div>
+<a id="a81435a1039c94c6b9e69d2cc26b2f3a7" name="a81435a1039c94c6b9e69d2cc26b2f3a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81435a1039c94c6b9e69d2cc26b2f3a7">&#9670;&#160;</a></span>leaveGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TicTacToeWindow::leaveGame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал, отправляемый при нажатии на кнопку "Выйти". </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/ui/components/<a class="el" href="game__window_8h_source.html">game_window.h</a></li>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/ui/components/<a class="el" href="game__window_8cpp_source.html">game_window.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

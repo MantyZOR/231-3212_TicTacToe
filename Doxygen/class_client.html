@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicTacToe: Класс Client</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicTacToe
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="class_client-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Client</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для работы с сетевым клиентом.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="client_8h_source.html">client.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a62c947c8a48e82741b2b65ff8f4eff01" id="r_a62c947c8a48e82741b2b65ff8f4eff01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62c947c8a48e82741b2b65ff8f4eff01">connectToHost</a> (const QString &amp;host, quint16 port) const</td></tr>
+<tr class="memdesc:a62c947c8a48e82741b2b65ff8f4eff01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подключается к серверу.  <br /></td></tr>
+<tr class="separator:a62c947c8a48e82741b2b65ff8f4eff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee22280bd5bd141a296d681e622a565a" id="r_aee22280bd5bd141a296d681e622a565a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee22280bd5bd141a296d681e622a565a">writeData</a> (const QString &amp;data)</td></tr>
+<tr class="memdesc:aee22280bd5bd141a296d681e622a565a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет данные на сервер.  <br /></td></tr>
+<tr class="separator:aee22280bd5bd141a296d681e622a565a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b30d9ce2f3003a0067228a32cf07ae" id="r_a07b30d9ce2f3003a0067228a32cf07ae"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07b30d9ce2f3003a0067228a32cf07ae">readData</a> ()</td></tr>
+<tr class="memdesc:a07b30d9ce2f3003a0067228a32cf07ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Читает данные, полученные от сервера.  <br /></td></tr>
+<tr class="separator:a07b30d9ce2f3003a0067228a32cf07ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabfb0b445afe20b03d73f27afa044608" id="r_aabfb0b445afe20b03d73f27afa044608"><td class="memItemLeft" align="right" valign="top">QTcpSocket *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabfb0b445afe20b03d73f27afa044608">getSocket</a> () const</td></tr>
+<tr class="memdesc:aabfb0b445afe20b03d73f27afa044608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает указатель на объект сокета.  <br /></td></tr>
+<tr class="separator:aabfb0b445afe20b03d73f27afa044608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a718af1895e51cccfe90ca590f2f462c7" id="r_a718af1895e51cccfe90ca590f2f462c7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_client.html">Client</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a718af1895e51cccfe90ca590f2f462c7">getInstance</a> ()</td></tr>
+<tr class="memdesc:a718af1895e51cccfe90ca590f2f462c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает единственный экземпляр класса <a class="el" href="class_client.html" title="Класс для работы с сетевым клиентом.">Client</a>.  <br /></td></tr>
+<tr class="separator:a718af1895e51cccfe90ca590f2f462c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для работы с сетевым клиентом. </p>
+<p>Обеспечивает подключение к серверу, отправку и получение данных. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="client_8h_source.html">client.h</a> строка <a class="el" href="client_8h_source.html#l00011">11</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a62c947c8a48e82741b2b65ff8f4eff01" name="a62c947c8a48e82741b2b65ff8f4eff01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c947c8a48e82741b2b65ff8f4eff01">&#9670;&#160;</a></span>connectToHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Client::connectToHost </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">quint16</td>          <td class="paramname"><span class="paramname"><em>port</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подключается к серверу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>Адрес сервера (например, "127.0.0.1"). </td></tr>
+    <tr><td class="paramname">port</td><td>Порт сервера (например, 8080). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="client_8cpp_source.html">client.cpp</a> строка <a class="el" href="client_8cpp_source.html#l00030">30</a></p>
+
+</div>
+</div>
+<a id="a718af1895e51cccfe90ca590f2f462c7" name="a718af1895e51cccfe90ca590f2f462c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718af1895e51cccfe90ca590f2f462c7">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_client.html">Client</a> &amp; Client::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает единственный экземпляр класса <a class="el" href="class_client.html" title="Класс для работы с сетевым клиентом.">Client</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на единственный экземпляр класса <a class="el" href="class_client.html" title="Класс для работы с сетевым клиентом.">Client</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="client_8cpp_source.html">client.cpp</a> строка <a class="el" href="client_8cpp_source.html#l00008">8</a></p>
+
+</div>
+</div>
+<a id="aabfb0b445afe20b03d73f27afa044608" name="aabfb0b445afe20b03d73f27afa044608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabfb0b445afe20b03d73f27afa044608">&#9670;&#160;</a></span>getSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTcpSocket * Client::getSocket </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает указатель на объект сокета. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на объект QTcpSocket. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="client_8cpp_source.html">client.cpp</a> строка <a class="el" href="client_8cpp_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a id="a07b30d9ce2f3003a0067228a32cf07ae" name="a07b30d9ce2f3003a0067228a32cf07ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b30d9ce2f3003a0067228a32cf07ae">&#9670;&#160;</a></span>readData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray Client::readData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Читает данные, полученные от сервера. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Массив байтов, содержащий полученные данные.</dd>
+<dd>
+Массив байтов (QByteArray), содержащий полученные данные. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="client_8cpp_source.html">client.cpp</a> строка <a class="el" href="client_8cpp_source.html#l00050">50</a></p>
+
+</div>
+</div>
+<a id="aee22280bd5bd141a296d681e622a565a" name="aee22280bd5bd141a296d681e622a565a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee22280bd5bd141a296d681e622a565a">&#9670;&#160;</a></span>writeData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Client::writeData </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправляет данные на сервер. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Данные для отправки.</td></tr>
+    <tr><td class="paramname">data</td><td>Данные для отправки (строка QString). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="client_8cpp_source.html">client.cpp</a> строка <a class="el" href="client_8cpp_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/network/<a class="el" href="client_8h_source.html">client.h</a></li>
+<li>231-3212_TicTacToe-frontend/231-3212_TicTacToe-frontend/src/network/<a class="el" href="client_8cpp_source.html">client.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
